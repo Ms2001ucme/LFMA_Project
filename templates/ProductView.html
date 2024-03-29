@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Product
+{% endblock title %}
+    
+
+{% block content %}
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.product-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-details p {
+    margin-bottom: 10px;
+}
+
+.product-image {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+</style>
+<h1>{{ product.name }}</h1>
+
+    <div class="product-image">
+        <img src="{{ product.image.url }}" alt="{{ product.name }} image">
+    </div>
+
+    <div class="product-details">
+        <p>*Description:*</p>
+        <p>{{ product.description }}</p>
+
+        <p>*Price:* <b>{{ product.price }}</b></p>
+        <p>*Quantity Available:* <b>{{ product.quantity }}</b></p>
+
+        <a href="buy/" class="service-button">  
+            <div class="mb-3">
+                <button class="btn btn-success btn-lg btn-block">Buy</button>
+            </div>
+        </a>
+    </div>
+        
+       
+    </div>
+
+{% endblock content %}
+    

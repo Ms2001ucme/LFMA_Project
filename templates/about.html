@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    About
+{% endblock title %}
+
+{% block content %}
+<section class="py-5" style="background-color: #BCF5B2;">
+    <!-- Start: H1 -->
+    <h1 class="text-center text-uppercase">Our team</h1><!-- End: H1 -->
+    <!-- Start: H2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+
+
+                <!-- Start: card container -->
+                <div class="card-container-imagia mb-4">
+                    <!-- Start: card -->
+                    <div class="card-imagia">
+                        <!-- Start: front -->
+                        <div class="front-imagia">
+                            <!-- Start: user image -->
+                            <div class="user-imagia"><img class="rounded-circle" alt=""
+                                    src="{% static 'm.avif' %}" height="300" width="300"></div><!-- End: user image -->
+                            <!-- Start: texte -->
+                            <div class="py-1 px-3 text-center">
+                                <h3 class="text-capitalize m-0">Mohit Saini</h3>
+                            </div><!-- End: texte -->
+                        </div><!-- End: front -->
+                    </div><!-- End: card -->
+                </div><!-- End: card container -->
+
+
+                <!-- Start: card container -->
+                <div class="card-container-imagia mb-4">
+                    <!-- Start: card -->
+                    <div class="card-imagia">
+                        <!-- Start: front -->
+                        <div class="front-imagia">
+                            <!-- Start: user image -->
+                            <div class="user-imagia"><img class="rounded-circle" alt=""
+                                    src="{% static 'a.avif' %}" height="300" width="300"></div><!-- End: user image -->
+                            <!-- Start: texte -->
+                            <div class="py-1 px-3 text-center">
+                                <h3 class="text-capitalize m-0">Abhishek Kumar Singh</h3>
+                            </div><!-- End: texte -->
+                        </div><!-- End: front -->
+                    </div><!-- End: card -->
+                </div><!-- End: card container -->
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <!-- Start: card container -->
+                <div class="card-container-imagia mb-4">
+                    <!-- Start: card -->
+                    <div class="card-imagia">
+                        <!-- Start: front -->
+                        <div class="front-imagia">
+                            <!-- Start: user image -->
+                            <div class="user-imagia"><img class="rounded-circle" alt=""
+                                    src="{% static 't.avif' %}" height="300" width="300">
+                            </div><!-- End: user image -->
+                            <!-- Start: Texte -->
+                            <div class="py-1 px-3 text-center">
+                                <h3 class="text-capitalize m-0">Tanya Verma</h3>
+                            </div><!-- End: texte -->
+                        </div><!-- End: front -->
+                    </div><!-- End: card -->
+                </div><!-- End: card container -->
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <!-- Start: card container -->
+                <div class="card-container-imagia mb-4">
+                    <!-- Start: card -->
+                    <div class="card-imagia">
+                        <!-- Start: front -->
+                        <div class="front-imagia">
+                            <!-- Start: user image -->
+                            <div class="user-imagia"><img class="rounded-circle" alt=""
+                                    src="{% static 'ct.avif' %}" height="300" width="300">
+                            </div><!-- End: user image -->
+                            <!-- Start: texte -->
+                            <div class="py-1 px-3 text-center">
+                                <h3 class="text-capitalize m-0">Chitranjan Gupta</h3>
+                            </div><!-- End: texte -->
+                        </div><!-- End: front -->
+                    </div><!-- End: card -->
+                </div><!-- End: card container -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

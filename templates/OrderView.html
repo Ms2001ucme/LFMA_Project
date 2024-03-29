@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-4 mb-4">Order Details</h1>
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            Order Information
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Product Name: {{ order.product.name }}</h5>
+            <p class="card-text">Buyer: {{ order.buyer.username }}</p>
+            <p class="card-text">Seller: {{ order.seller.username }}</p>
+            <p class="card-text">Quantity: {{ order.quantity }}</p>
+            <p class="card-text">Total Price: ${{ order.net_price }}</p>
+            <p class="card-text">Status: {{ order.status }}</p>
+        </div>
+    </div>
+</div>
+<style>
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .card-header {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+</style>   
+{% endblock %}
+ 

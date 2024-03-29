@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Order
+{% endblock title %}
+
+
+{% block content %}
+
+<h1>Order {{ product.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+      
+
+
+        <!-- Display additional fields -->
+        <p><strong>Product Name:</strong> {{ product.name }}</p>
+        <p><strong>Seller:</strong> {{ product.seller.username }}</p>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <p><strong>Available Quantity:</strong> {{ product.quantity }}</p>
+
+        <!-- Quantity input -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" min="1" max="{{ product.quantity }}" required>
+        <button type="submit">Confirm Order</button>
+    </form>
+
+{% endblock content %}
+
+    
+    

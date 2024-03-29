@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Product Form  
+{% endblock title %}
+    
+
+{% block content %}
+<style>
+    body {
+        background-color: #8bf3bd;
+        font-family: Arial, sans-serif;
+    }
+    
+    .content-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-border {
+        border: 5px solid #22da7b;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    h4 {
+        margin-top: 0;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    button[type="submit"] {
+        background-color: #08a8f5;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #1aa65f;
+    }
+</style>
+
+<div class="form-border">
+    <div class="content-wrapper">
+        <h4>Create a Product</h4>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+            
+            <label for="id_description">Description:</label>
+            {{ form.description }}
+            
+            <label for="id_price">Price:</label>
+            {{ form.price }}
+            
+            <label for="id_image">Image:</label>
+            {{ form.image }}
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

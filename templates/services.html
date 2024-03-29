@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Services
+{% endblock title %}
+    
+ 
+{% block content %}
+
+<h1>Our Services</h1>
+<p>
+    <h4>
+        In the agricultural realm, farmers employ diverse marketing strategies
+        like direct sales and e-commerce to sell crops and livestock. Wholesalers
+        distribute goods to retailers and food processors. Consumers, driven by factors like quality and sustainability,
+        shape the market, emphasizing locally sourced and ethically produced farm products.
+    </h4>
+</p>
+<div class="container">
+    <div class="row justify-content-center"> <!-- Center the buttons -->
+        <div class="col-md-6">
+            <a href="{% url 'productform' %}" class="service-button">  
+                <div class="mb-3">
+                    <button class="btn btn-primary btn-lg btn-block">Sell  Products</button>
+                </div>
+            </a>
+            <a href="/service2/" class="service-button">  
+                <div class="mb-3">
+                    <button class="btn btn-success btn-lg btn-block">Buy Products</button>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+ 

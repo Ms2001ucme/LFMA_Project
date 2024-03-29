@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Contact
+{% endblock title %}
+    
+ 
+{% block content %}
+
+<div class="container-fluid px-0 mb-5">
+    <img src="/static/contact.jpg" class="d-block w-100" alt="..." height="300">
+    <h2 class="text-center mt-5" > Contact Us</h2>
+</div>
+
+<div class="container mb-4">
+<form method="post">
+  {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-check-label" for="exampleCheck1">message</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  
+</div>
+
+{% endblock content %}
+ 

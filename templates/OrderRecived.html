@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Orders
+{% endblock title %}
+
+<style>
+    .list-group-item {
+        padding: 10px; /* Adding padding to list items */
+        margin-bottom: 10px; /* Adding margin-bottom for spacing between list items */
+    }
+</style>
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">My Orders</h1>
+    {% if orders %}
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <ul class="list-group">
+                {% for order in orders %}
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>{{ order.product.name }}</h5>
+                            <p class="mb-1">Seller: {{ order.seller.username }}</p>
+                            <p class="mb-1">Quantity: {{ order.quantity }}</p>
+                            <p class="mb-1">Total Price: ${{ order.net_price }}</p>
+                            <p class="mb-0">Status: {{ order.status }}</p>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center justify-content-end">
+                            <a href="../order/{{ order.id }}/" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info" role="alert">
+        No orders found.
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}
