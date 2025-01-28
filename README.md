@@ -6,7 +6,11 @@ This platform provides a digital marketplace that promotes sustainable living an
 - Product Listings: View available products with details like price, quantity, and description.
 - Order Management: Customers can place orders, and farmers can manage their sales.
 ## Screenshots
+
+## HomePage
 ![Homepage](templates/home.png)
+
+## Product_View
 ![Product_View](templates/product.png)
 
 ## Tech Stack
